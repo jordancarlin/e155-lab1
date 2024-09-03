@@ -28,13 +28,13 @@ module lab1_tb();
   //  - Load the testvectors
   //  - Pulse the reset line (if applicable)
   initial begin
-      $readmemb("lab1_testvectors.tv", testvectors, 0, `N_TV - 1);
-      vectornum = 0; errors = 0;
+    $readmemb("lab1_testvectors.tv", testvectors, 0, `N_TV - 1);
+    vectornum = 0; errors = 0;
   end
 
   // Apply test vector on the rising edge of clk
   always @(posedge clk) begin
-        #1; {s, led_expected[0], led_expected[1], segs_expected} = testvectors[vectornum];
+    #1; {s, led_expected[0], led_expected[1], segs_expected} = testvectors[vectornum];
   end
 
   // Create dumpfile for signals
@@ -46,16 +46,15 @@ module lab1_tb();
   // Check results on the falling edge of clk
   always @(negedge clk) begin
     if (led[0] != led_expected[0] || led[1] != led_expected[1] || segs[0] != segs_expected[0]) begin
-        $display("Error: inputs: s=%b", s);
-        $display(" outputs: led[0]=%b (%b expected), led[1]=%b (%b expected), segs=%b (%b expected)", led[0], led_expected[0], led[1], led_expected[1], segs, segs_expected);
-        errors = errors + 1;
+      $display("Error: inputs: s=%b", s);
+      $display(" outputs: led[0]=%b (%b expected), led[1]=%b (%b expected), segs=%b (%b expected)", led[0], led_expected[0], led[1], led_expected[1], segs, segs_expected);
+      errors = errors + 1;
     end
 
-      vectornum = vectornum + 1;
-
-    if (testvectors[vectornum] === 11'bx) begin
-        $display("%d tests completed with %d errors.", vectornum, errors);
-        $quit;
+    vectornum = vectornum + 1;
+    if (testvectors[vectornum] === 13'bx) begin
+      $display("%d tests completed with %d errors.", vectornum, errors);
+      $stop;
     end
   end
 endmodule

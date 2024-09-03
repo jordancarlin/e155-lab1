@@ -1,1 +1,2 @@
-lab1_jc,/,/home/jcarlin/e155/e155-lab1/fpga/radiant_project/e155_lab1/source/impl_1/lab1_jc.sv
+lab1_jc,/,/home/jcarlin/e155/e155-lab1/fpga/radiant_project/e155_lab1/source/lab1_jc.sv
+lab1_tb,/,/home/jcarlin/e155/e155-lab1/fpga/testbench/lab1_tb.sv

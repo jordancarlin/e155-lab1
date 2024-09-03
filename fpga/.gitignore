@@ -20,3 +20,5 @@ transcript
 promote.pfl
 qrun.out
 vsim.wlf
+*.vcd
+etch*
