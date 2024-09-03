@@ -9,6 +9,8 @@ module top (
   output logic [6:0] segs
 );
 
+  logic [6:0] segs_inverted;
+
   // Logic driven LEDs
   assign led[0] = s[0] ^ s[1];
   assign led[1] = s[2] & s[3];
@@ -17,6 +19,8 @@ module top (
   pulse #(20000000) pulse (.clk, .led(led[2]));
 
   // Seven-segment display decoder
-  seg_decoder seg_decoder (.s, .segs);
+  seg_decoder seg_decoder (.s, .segs(segs_inverted));
+  //Invert segments for common cathode operation
+  assign segs = ~segs_inverted;
 
 endmodule
