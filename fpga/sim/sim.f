@@ -3,10 +3,11 @@
 -reflib ovi_ice40up
 
 
-"/home/jcarlin/e155/e155-lab1/fpga/radiant_project/e155_lab1/source/impl_1/lab1_jc.sv" 
-"/home/jcarlin/e155/e155-lab1/fpga/src/top.sv" 
 "/home/jcarlin/e155/e155-lab1/fpga/src/pulse.sv" 
 "/home/jcarlin/e155/e155-lab1/fpga/src/seg_decoder.sv" 
+"/home/jcarlin/e155/e155-lab1/fpga/src/top.sv" 
+"/home/jcarlin/e155/e155-lab1/fpga/radiant_project/e155_lab1/source/lab1_jc.sv" 
+"/home/jcarlin/e155/e155-lab1/fpga/testbench/lab1_tb.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -17,11 +18,11 @@
 -end
 
 -gui
--top lab1_jc
+-top lab1_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end
 
 -do "view wave"
 -do "add wave /*"
--do "run 100 ns"
+-do "run -all"

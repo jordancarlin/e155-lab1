@@ -1,0 +1,25 @@
+// lab1_testvectors.tv
+// Jordan Carlin
+// jcarlin@hmc.edu
+// 2 September 2024
+//
+// Testvectors for the top level lab1_jc module to check operation
+// of 7-segment display decoder and logic for LEDs.
+//
+// s[3:0]_led0_led1_segs[6:0]
+0000_0_0_1000000
+0001_1_0_1111001
+0010_1_0_0100100
+0011_0_0_0110000
+0100_0_0_0011001
+0101_1_0_0100100
+0110_1_0_0100000
+0111_0_0_1111000
+1000_0_0_0000000
+1001_1_0_0011000
+1010_1_0_0001000
+1011_0_0_0000011
+1100_0_1_1110000
+1101_1_1_0100001
+1110_1_1_0000110
+1111_0_1_0011110
