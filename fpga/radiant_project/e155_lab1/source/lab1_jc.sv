@@ -3,7 +3,7 @@
 // FPGA implementation for E155 Lab 1
 
 module lab1_jc (
-	input  logic [3:0] s,
+  input  logic [3:0] s,
   output logic [2:0] led,
   output logic [6:0] segs
 );
