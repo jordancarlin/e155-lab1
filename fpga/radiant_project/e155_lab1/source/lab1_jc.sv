@@ -1,6 +1,7 @@
 // lab1_jc.sv
 // Jordan Carlin, jcarlin@hmc.edu, 2 September 2024
-// FPGA implementation for E155 Lab 1
+// Top-level FPGA implementation for E155 Lab 1
+// Combines top module with clock library module.
 
 module lab1_jc (
   input  logic [3:0] s,

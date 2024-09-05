@@ -1,6 +1,7 @@
 // top.sv
 // Jordan Carlin, jcarlin@hmc.edu, 2 September 2024
-// Top-level module for the E155 Lab 1 FPGA design
+// Top-level (non FPGA-specific) module for the E155 Lab 1 FPGA design
+// Drives 7-segment display and LEDs based on input switches
 
 module top (
   input  logic       clk,
@@ -22,5 +23,4 @@ module top (
   seg_decoder seg_decoder (.s, .segs(segs_inverted));
   //Invert segments for common cathode operation
   assign segs = ~segs_inverted;
-
 endmodule

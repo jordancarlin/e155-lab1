@@ -1,6 +1,6 @@
-// top.sv
+// seg_decoder.sv
 // Jordan Carlin, jcarlin@hmc.edu, 2 September 2024
-// 7-segment LED decoder
+// 7-segment LED decoder. LEDs that should be on are high.
 
 module seg_decoder(
   input logic [3:0] s,
@@ -26,5 +26,4 @@ module seg_decoder(
       4'b1110: segs = 7'b1111001; // E
       4'b1111: segs = 7'b1110001; // F
     endcase
-
 endmodule
